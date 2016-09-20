@@ -1,0 +1,19 @@
+<?php
+
+namespace App\Http\Controllers;
+
+use Illuminate\Http\Request;
+use App\Test;
+use DB;
+use App\Http\Requests;
+
+class SQLController extends Controller
+{
+    //
+
+	public function main() {
+		$teks = Test::where('teks','=','Hello World!')->first()->Value;
+		$uptime = DB::select("SHOW GLOBAL STATUS LIKE 'Uptime'")[0]->Value;
+		return $teks + ';
+	}
+}

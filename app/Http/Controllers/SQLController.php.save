@@ -1,0 +1,23 @@
+<?php
+
+namespace App\Http\Controllers;
+
+use Illuminate\Http\Request;
+use App\Test;
+use DB;
+use App\Http\Requests;
+
+class SQLController extends Controller
+{
+    //
+
+	public function main() {
+		$teks = Test::where('id','=','1')->first();
+		$uptimeQuery = DB::select("SHOW GLOBAL STATUS LIKE 'Uptime'")[0]->Value;
+		$linuxUptime = shell_exec('uptime');
+		DB::update(
+'UPDATE test set uptime = ? where id = 1'
+		$result = $teks->teks . "<br>" . "Uptime using query: " . $uptimeQuery;
+		return $result;
+	}
+}
