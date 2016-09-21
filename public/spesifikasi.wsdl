@@ -43,7 +43,7 @@
 
   <wsdl:service name="helloService">
     <wsdl:port name="helloPort" binding="hy:helloBinding">
-      <soap:address location="LOKASI_BINDING_ANDA"/>
+      <soap:address location="152.118.33.97/tugas3/server"/>
     </wsdl:port>
   </wsdl:service>
 

@@ -8,7 +8,15 @@
         <title>Klien</title>
     </head>
     <body>
-		aaaa
-		
+        <?php
+            echo Form::open(['url' => '/tugas3/server']);
+            echo Form::label('urlWSDL', 'URL WSDL: ');
+            echo Form::text('urlWSDL');
+            echo '<br>';
+            echo Form::label('strDikirim', 'String Dikirim: ');
+            echo Form::text('strDikirim');
+            echo '<br>';
+            echo Form::submit('Kirim');
+            echo Form::close(); ?>
     </body>
 </html>

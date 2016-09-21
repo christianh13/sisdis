@@ -20,3 +20,5 @@ Route::get('/tugas3/spesifikasi.wsdl', function() {
 Route::get('/tugas3/klien', function() {
 	return view('client');
 });
+
+Route::post('/tugas3/server', 'WSDLController@server');
